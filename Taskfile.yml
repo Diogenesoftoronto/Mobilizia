@@ -1,0 +1,61 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: test
+
+  setup:
+    desc: Install all necessary tools
+    cmds:
+      - go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+      - go install github.com/securego/gosec/v2/cmd/gosec@latest
+      - go install github.com/mfridman/tparse@latest
+
+  test:
+    desc: Run all tests in the project, excluding the assets folder
+    cmds:
+      - go test $(go list ./... | grep -v /assets/)
+
+  race-test:
+    desc: Run tests with race condition detection, excluding the assets folder
+    cmds:
+      - go test -race $(go list ./... | grep -v /assets/)
+
+  build:
+    desc: Build the project
+    cmds:
+      - go build -o mobilizia
+
+  run:
+    desc: Build and run the project
+    cmds:
+      - task: build
+      - ./mobilizia
+
+  clean:
+    desc: Clean up the project
+    cmds:
+      - rm -f mobilizia
+      - go clean
+
+  lint:
+    desc: Run linter on the project, excluding the assets folder
+    cmds:
+      - golangci-lint run $(go list ./... | grep -v /assets/)
+
+  vet:
+    desc: Run go vet to examine source code, excluding the assets folder
+    cmds:
+      - go vet $(go list ./... | grep -v /assets/)
+
+  sec:
+    desc: Run gosec for security checks, excluding the assets folder
+    cmds:
+      - gosec $(go list ./... | grep -v /assets/)
+
+  tparse-test:
+    desc: Run tests with verbose output using tparse, excluding the assets folder
+    cmds:
+      - go test $(go list ./... | grep -v /assets/) | tparse
+

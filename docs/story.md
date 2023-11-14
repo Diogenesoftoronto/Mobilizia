@@ -1,0 +1,3 @@
+Once united, the realm of Mobilizia was split by a cosmic anomaly, giving rise to the Neon Knights and Arcade Wizards. This division, now forgotten, left a legacy of conflict amidst a backdrop of glowing neon and vibrant pixels. The battlefield is not just a place of war but a canvas where the past's echoes play out in light and magic, a reminder of the unity that once was.
+
+In this realm, commanders lead their factions in a battle that is as much about strategic prowess as it is about style and spectacle. Every move is a nod to the timeless dance of light and pixels, where strategy meets a digital fantasy in a world that transcends time.
