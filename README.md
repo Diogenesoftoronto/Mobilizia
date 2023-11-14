@@ -95,6 +95,4 @@ For more information, contact us at [contact information].
 ---
 
 © [Year] Mobilizia Team. All rights reserved.
-```
 
-This section provides a straightforward guide for cloning the repository and building the game using Go's standard build pipeline. Replace `[repository URL]` with the actual URL of your GitHub repository. The `go build` command will compile the source code into an executable named `mobilizia`, which can then be run directly.
