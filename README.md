@@ -17,7 +17,7 @@ quick decision-making.
 - Chess-inspired strategy and StarCraft-style real-time action.
 - Diverse fantasy creatures with unique abilities.
 - Open-source development.
-- All game proceeds support charitable causes.
+- 30% game proceeds support charitable causes.
 - Developed with the Ebiten engine and Donburi framework.
 
 ## Getting Started
